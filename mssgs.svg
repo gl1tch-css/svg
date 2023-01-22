@@ -1,0 +1,34 @@
+    <svg width="auto" height="auto">
+        <style type="text/css">
+          <![CDATA[
+            text {
+              font-size: 5vw;
+              font-family: 'Arial Black';
+              
+            }
+            #text1 {
+              fill: #fff;
+            }
+            #text2, #text3 {
+              opacity: 0;
+              fill: none;
+              stroke: #fff;
+            }
+            #text2 {
+                clip-path: inset(50% 0 0 0);
+                transition: 2s;
+            }
+            #text3 {
+                clip-path: inset(65% 0 0 0);
+                transition: 4s;
+            }
+
+            #text1:hover + #text2, #text1:hover ~ #text3{
+              opacity: 1;
+            }
+          ]]>
+        </style>
+        <text id="text1" y="50">MESSAGES</text>
+        <text id="text2" y="70">MESSAGES</text>
+        <text id="text3" y="80">MESSAGES</text>
+      </svg>
